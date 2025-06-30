@@ -1,5 +1,7 @@
 /* css.css */
 
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=Noto+Sans+JP:wght@100..900&display=swap');
+
 body {
     width: 100vw;
     height: 100vh;
@@ -11,6 +13,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    font-family: "Noto Sans JP", sans-serif;
 
     /* background-color: black; */
     /* 背景を暗くすると発光が映える */
