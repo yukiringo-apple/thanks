@@ -1,0 +1,118 @@
+/* css.css */
+
+body {
+    width: 100vw;
+    height: 100vh;
+
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* background-color: black; */
+    /* 背景を暗くすると発光が映える */
+}
+
+.img-patora {
+    width: 20vw;
+}
+
+.button-oyatu {
+    width: 300px;
+    height: 80px;
+
+    padding: 30px;
+    margin-top: 50px;
+
+    border-radius: 8px;
+    background-color: rgb(137, 73, 157);
+    color: white;
+
+    border: none;
+    box-shadow: 0 10px 0px 0px rgb(82, 54, 90);
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.button-oyatu:hover {
+    transform: translateY(4px);
+    box-shadow: 0 6px 0px 0px rgb(82, 54, 90);
+    cursor: pointer;
+}
+
+.button-oyatu:active {
+    transform: translateY(6px);
+    box-shadow: 0 4px 0px 0px rgb(82, 54, 90);
+}
+
+
+
+#img-fade {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 10vw;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 2s ease;
+    /* ← 修正: opasity → opacity */
+    z-index: 9999;
+}
+
+#img-fade.show {
+    opacity: 1;
+}
+
+#p-thanks {
+    font-size: 3rem;
+    font-weight: bold;
+    display: inline-block;
+    animation: grow 3s ease-in-out infinite alternate, rainbowColor 6s linear infinite;
+    color: hsl(0, 100%, 70%);
+    text-shadow: 0 0 10px currentColor, 0 0 20px currentColor;
+    /* 色に合わせた発光 */
+}
+
+@keyframes rainbowColor {
+    0% {
+        color: hsl(0, 100%, 70%);
+    }
+
+    16% {
+        color: hsl(60, 100%, 70%);
+    }
+
+    33% {
+        color: hsl(120, 100%, 70%);
+    }
+
+    50% {
+        color: hsl(180, 100%, 70%);
+    }
+
+    66% {
+        color: hsl(240, 100%, 70%);
+    }
+
+    83% {
+        color: hsl(300, 100%, 70%);
+    }
+
+    100% {
+        color: hsl(360, 100%, 70%);
+    }
+}
+
+/* 拡大アニメーション */
+@keyframes grow {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.3);
+    }
+}
